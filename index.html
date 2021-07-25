@@ -12,7 +12,7 @@
 
     <!-- Internal Javascript -->
     <!-- <button>Click Me!</button> -->
-
+<!-- 
     <p id="text">Random stuff written here to test the Javascript code.</p>
     <button id="changeTextButton">Click to change text</button>
 
@@ -27,33 +27,53 @@
     <button id="changeStyle">Change style</button>
 
     <p id="disappearingText">This text will disappear when you click on the button.</p>
-    <button id="disappear">Disappear</button>
+    <button id="disappear">Disappear</button> -->
+
+    <!-- Variables -->
+    <input type="text" id="textInput">
+    <button id="changeTextButton">Change the text</button>
+    <p id="text">This is some text</p>
 
     <!-- Inernal Javascript stuff here -->
     <script type="text/javascript">
-        // document.getElementById("text").innerHTML = "Stuff has been changed, which means that Javascript code is working."; 
-        document.getElementById("changeTextButton").onclick = function(){
-            // alert("Button Clicked!");
-            document.getElementById("text").innerHTML = "You have clicked on the button and now the text has changed."; 
-        }
+        // // document.getElementById("text").innerHTML = "Stuff has been changed, which means that Javascript code is working."; 
+        // document.getElementById("changeTextButton").onclick = function(){
+        //     // alert("Button Clicked!");
+        //     document.getElementById("text").innerHTML = "You have clicked on the button and now the text has changed."; 
+        // }
 
-        document.getElementById("secondButton").onclick = function(){
-            // alert("Second button as been clicked"); 
-            document.getElementById("secondParagraph").innerHTML = document.getElementById("secondParagraph").innerHTML + " powerful"; 
-            }
+        // document.getElementById("secondButton").onclick = function(){
+        //     // alert("Second button as been clicked"); 
+        //     document.getElementById("secondParagraph").innerHTML = document.getElementById("secondParagraph").innerHTML + " powerful"; 
+        //     }
 
-        document.getElementById("saySomething").onclick = function() {
-            document.getElementById("emptyParagraph").innerHTML = "Well, aren't you a dissapointment."; 
-        }
+        // document.getElementById("saySomething").onclick = function() {
+        //     document.getElementById("emptyParagraph").innerHTML = "Well, aren't you a dissapointment."; 
+        // }
         
-        document.getElementById("changeStyle").onclick = function() {
-            document.getElementById("moreText").style.color = "red";
-            document.getElementById("moreText").style.fontSize = "30px";
-            document.getElementById("moreText").style.backgroundColor = "pink";   
-        }
+        // document.getElementById("changeStyle").onclick = function() {
+        //     document.getElementById("moreText").style.color = "red";
+        //     document.getElementById("moreText").style.fontSize = "30px";
+        //     document.getElementById("moreText").style.backgroundColor = "pink";   
+        // }
 
-        document.getElementById("disappear").onclick = function() {
-            document.getElementById("disappearingText").style.display = "none"; 
+        // document.getElementById("disappear").onclick = function() {
+        //     document.getElementById("disappearingText").style.display = "none"; 
+        // }
+
+        // Variables 
+        // var x = 5;
+        // x = 20; 
+        
+        // var name = "Farhan"; 
+
+        // alert(x);
+        // alert(name);
+        
+        document.getElementById("changeTextButton").onclick = function() {
+            var textEntered = ""; 
+            textEntered = document.getElementById("textInput").value; 
+            document.getElementById("text").innerHTML = textEntered; 
         }
     </script>
 </body>
