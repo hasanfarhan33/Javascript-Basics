@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <!-- Inline Javascript -->
+    <!-- <button onClick="alert('Wow! You managed to click on the button. Congratulations ya blithering idiot.')">Click Me!</button> -->
+
+    <!-- Internal Javascript -->
+    <!-- <button>Click Me!</button> -->
+
+    <p id="text">Random stuff written here to test the Javascript code.</p>
+    <button id="changeTextButton">Click to change text</button>
+
+    <p id="secondParagraph">Javascript is ...</p>
+    <button id="secondButton">Define Javascript</button>
+
+    <p id="emptyParagraph"></p>
+    <button id="saySomething">Say something!</button>
+
+
+    <p id="moreText">You can even manipulate styles with Javascript</p>
+    <button id="changeStyle">Change style</button>
+
+    <p id="disappearingText">This text will disappear when you click on the button.</p>
+    <button id="disappear">Disappear</button>
+
+    <!-- Inernal Javascript stuff here -->
+    <script type="text/javascript">
+        // document.getElementById("text").innerHTML = "Stuff has been changed, which means that Javascript code is working."; 
+        document.getElementById("changeTextButton").onclick = function(){
+            // alert("Button Clicked!");
+            document.getElementById("text").innerHTML = "You have clicked on the button and now the text has changed."; 
+        }
+
+        document.getElementById("secondButton").onclick = function(){
+            // alert("Second button as been clicked"); 
+            document.getElementById("secondParagraph").innerHTML = document.getElementById("secondParagraph").innerHTML + " powerful"; 
+            }
+
+        document.getElementById("saySomething").onclick = function() {
+            document.getElementById("emptyParagraph").innerHTML = "Well, aren't you a dissapointment."; 
+        }
+        
+        document.getElementById("changeStyle").onclick = function() {
+            document.getElementById("moreText").style.color = "red";
+            document.getElementById("moreText").style.fontSize = "30px";
+            document.getElementById("moreText").style.backgroundColor = "pink";   
+        }
+
+        document.getElementById("disappear").onclick = function() {
+            document.getElementById("disappearingText").style.display = "none"; 
+        }
+    </script>
+</body>
+</html>
