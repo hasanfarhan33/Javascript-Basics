@@ -35,10 +35,18 @@
     <p id="text">This is some text</p> -->
 
     <!-- If statements -->
-    <p>What is the magic word?</p>
+    <!-- <p>What is the magic word?</p>
     <input type="text" id="magicWordInput">
-    <button id="checkMagicWord">Check Magic Word</button>
+    <button id="checkMagicWord">Check Magic Word</button> -->
 
+    <!-- For loops -->
+    <!-- <div id="tweets"></div> -->
+
+    <!-- While loops -->
+    <!-- <div id="tweets"></div> -->
+    <p>How many fingers am I holding up?</p>
+    <input type="number" id=inputNumber min=0 max = 5>
+    <button id="submitButton">Submit</button>
 
     <!-- Inernal Javascript stuff here -->
     <script type="text/javascript">
@@ -112,17 +120,59 @@
         //     alert("X is not one or two"); 
         // }
 
-        document.getElementById("checkMagicWord").onclick = function() {
-            var enteredWord = document.getElementById("magicWordInput").value; 
-            var magicWord = "abracadabra"; 
-            if(enteredWord == magicWord) {
-                alert("You got it right!")
-            }
-            else {
-                alert("You can't do shit. You are a blithering idiot, why do you even exist on this planet you mere mortal?"); 
-            }
-        }
+        // document.getElementById("checkMagicWord").onclick = function() {
+        //     var enteredWord = document.getElementById("magicWordInput").value; 
+        //     var magicWord = "abracadabra"; 
+        //     if(enteredWord == magicWord) {
+        //         alert("You got it right!")
+        //     }
+        //     else {
+        //         alert("You can't do shit. You are a blithering idiot, why do you even exist on this planet you mere mortal?"); 
+        //     }
+        // }
+
+        // For loop
+        // var tweets = ["First Tweet", "Second Tweet", "Third Tweet", "Fourth Tweet", "Fifth Tweet", "Sixth Tweet"]
+        // var tweetString = ""; 
+        // for(var i = 0; i < tweets.length; i++) {
+        //     tweetString = tweetString + "<p>" + tweets[i] + "</p>"; 
+        //     document.getElementById("tweets").innerHTML = tweetString; 
+        // }
+
+        // While Loop
+        // var tweetString = ""; 
+        // var tweets = ["First tweet", "Second Tweet", "Third Tweet", "Fourth Tweet", "Fifth Tweet"]
         
+        // var i = 0; 
+        // while(i < tweets.length) {
+        //     tweetString = tweetString + "<p>" + tweets[i] + "</p>"; 
+        //     document.getElementById("tweets").innerHTML = tweetString; 
+        //     i++; 
+        // }
+
+        // This piece of code doesn't exactly work. Take a look at it later.
+        document.getElementById("submitButton").onclick = function() {
+            var answer = document.getElementById("inputNumber").value; 
+            var gotIt = false; 
+            var numberOfGuesses = 1;
+
+            while(gotIt == false)
+            {
+                var guess = Math.floor(Math.random() * 5);
+                if(guess == answer) {
+                gotIt = true;
+                alert("Got it. I was holding " + guess + " and it took you " + numberOfGuesses + " tries.");  
+                }
+                else {
+                // gotIt = false; 
+                // alert("Nope, that's not it."); 
+                numberOfGuesses++; 
+                }
+
+            }
+            
+        }
+
     </script>
 </body>
 </html>
