@@ -44,9 +44,11 @@
 
     <!-- While loops -->
     <!-- <div id="tweets"></div> -->
-    <p>How many fingers am I holding up?</p>
+    <!-- <p>How many fingers am I holding up?</p>
     <input type="number" id=inputNumber min=0 max = 5>
-    <button id="submitButton">Submit</button>
+    <button id="submitButton">Submit</button> -->
+
+    <!-- Functions -->
 
     <!-- Inernal Javascript stuff here -->
     <script type="text/javascript">
@@ -150,28 +152,49 @@
         //     i++; 
         // }
 
-        // This piece of code doesn't exactly work. Take a look at it later.
-        document.getElementById("submitButton").onclick = function() {
-            var answer = document.getElementById("inputNumber").value; 
-            var gotIt = false; 
-            var numberOfGuesses = 1;
+        // document.getElementById("submitButton").onclick = function() {
+        //     var answer = document.getElementById("inputNumber").value; 
+        //     var gotIt = false; 
+        //     var numberOfGuesses = 1;
 
-            while(gotIt == false)
-            {
-                var guess = Math.floor(Math.random() * 5);
-                if(guess == answer) {
-                gotIt = true;
-                alert("Got it. I was holding " + guess + " and it took you " + numberOfGuesses + " tries.");  
-                }
-                else {
-                // gotIt = false; 
-                // alert("Nope, that's not it."); 
-                numberOfGuesses++; 
-                }
+        //     while(gotIt == false)
+        //     {
+        //         var guess = Math.floor(Math.random() * 5);
+        //         if(guess == answer) {
+        //         gotIt = true;
+        //         alert("Got it. I was holding " + guess + " and it took you " + numberOfGuesses + " tries.");  
+        //         }
+        //         else {
+        //         // gotIt = false; 
+        //         // alert("Nope, that's not it."); 
+        //         numberOfGuesses++; 
+        //         }
 
-            }
-            
-        }
+        //     }     
+        // }
+
+        // FUNCTIONS
+        // function alertMe() {
+        //     alert("This is to alert you."); 
+        // }
+
+        // alertMe();
+
+        // function average(a, b) {
+        //     return ((a + b) /2); 
+        // } 
+
+        // alert(average(34, 43)); 
+
+        // function doAGuess(correctAnswer) {
+        //     var guess = Math.floor(Math.random() * 6) + 1;
+        //     if(guess == correctAnswer) {
+        //         return(true); 
+        //     } 
+        //     else {
+        //         return(false); 
+        //     }
+        // }
 
     </script>
 </body>
